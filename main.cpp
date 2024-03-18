@@ -59,7 +59,7 @@ bool Maths(stack <Leksema>& Stack_n, stack <Leksema>& Stack_o, Leksema& item) { 
 	case '/':
 		b = Stack_n.top().value;
 		if (a == 0) {
-			cerr << "Error! Cannot divide by 0!" << endl;
+			cout << "Error! Cannot divide by 0!" << endl;
 			return false;
 		}
 		else {
@@ -104,7 +104,7 @@ bool Maths(stack <Leksema>& Stack_n, stack <Leksema>& Stack_o, Leksema& item) { 
 		break;
 		
 	default:
-		cerr << "Error!" << endl;
+		cout << "Error!" << endl;
 		return false;
 		break;
 		}
@@ -248,8 +248,7 @@ int main()
                 return 0;
             }
         }
-        while (Stack_o.size() !=
-               0) { //Вызываем матем. функцию до тех пор, пока в стеке с операциями не будет 0 элементов
+        while (Stack_o.size() != 0) { //Вызываем матем. функцию до тех пор, пока в стеке с операциями не будет 0 элементов
             if (Maths(Stack_n, Stack_o, item) == false) { //Если функция вернет "false", то прекращаем работу
                 system("pause");
                 return 0;
