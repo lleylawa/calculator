@@ -2,6 +2,7 @@
 #include <sstream>
 #include <cmath>
 #include <stack>
+
 using namespace std;
 
 struct Leksema //Структура, описывающая любое число или операцию
@@ -157,11 +158,9 @@ int main()
                     continue;
                 }
                 if (foo[0] == 'a' && foo[1] == 'b' && foo[2] == 's') {
-                    double operand;
-                    sstr >> operand; // Read the operand of abs(a) function
                     item.type = 'a'; // Indicate that it's an abs(a) function
-                    item.value = operand;
-                    Stack_n.push(item); // Push the operand onto the number stack
+                    item.value = 0;
+                    Stack_o.push(item); // Push the operand onto the number stack
                     continue;
                 }
             }
